@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <div>
+      <div> 
+        <label for="add_entry_button">Add a New Entry</label><br> 
+        <button id="add_entry_button"> Press </button>        
+      </div>
+      <div>
+        <label for="edit_entry_text" >Edit Entry</label><br>
+        <input  id="edit_entry_text" type="text" placeholder="andrewID"> 
+        <button id="edit_entry_button"> Press </button>
+      </div>
+      <div>
+        <label for="delete_entry_text">Delete Entry</label><br>
+        <input  id="delete_entry_text" type="text" placeholder="andrewID"> 
+        <button id="delete_entry_button"> Press </button>
+      </div>
+      <!--<button id="edit_entry_button"> Edit </button> -->
+      <!-- <input id="edit_entry_button"   type="button" value="Edit"   onclick="editEntry()">
+      <input id="delete_entry_button" type="button" value="Delete" onclick="deleteEntry()"> -->
+    </div>
+
+    <br><br>
+    <input type="button" value="Close" onclick="google.script.host.close()" />
+
+  </body>
+  <script>
+
+    function setFirstName(first_value){
+      document.getElementById('first_name').value   = first_value
+    }
+
+    document.getElementById("add_entry_button").addEventListener("click", function(){
+      google.script.run.sidebarAdd()
+    })
+
+    document.getElementById("edit_entry_button").addEventListener("click", function(){
+      google.script.run.sidebarEdit()
+      // google.script.run
+      //   .withSuccessHandler(setFirstName)
+      //   .getFirstName()
+    })
+
+    // function submitForm() {
+    //   var fname = document.getElementById('first_name').value
+    //   var lname = document.getElementById('last_name').value
+    //   var advisor = document.getElementById('advisor').value
+    //   var andrewID = document.getElementById('andrewID').value
+    //   var keyNum = document.getElementById('key_number').value
+    //   var roomNum = document.getElementById('room_number').value
+    //   var givenDate = document.getElementById('given_date').value
+    //   var loseDate = document.getElementById('lose_date').value
+    //   google.script.run
+    //     .withSuccessHandler(closeForm)
+    //     .doSomething()
+    // }
+
+
+
+  </script>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <style>
+    input[type="text"], input[type="date"]{
+      width:90%;
+      padding:0.8em;
+    }
+    .form_input{
+      padding:0.5em;
+    }
+  </style>
+  <body>
+    <form id="myForm">
+      <div class="form_input">
+        <label for="first_name">First Name:</label><br>
+        <input type="text" id="first_name" value="">
+      </div>
+      <div class="form_input">
+        <label for="last_name">Last Name:</label><br>
+        <input type="text" id="last_name" value="">
+      </div>
+      <div class="form_input">
+        <label for="advisor">Advisor:</label><br>
+        <input type="text" id="advisor" value="">
+      </div>
+      <div class="form_input">
+        <label for="andrewID">AndrewID:</label><br>
+        <input type="text" id="andrewID" value="">
+      </div>
+      <div class="form_input">
+        <label for="key_number">Key Number:</label><br>
+        <input type="text" id="key_number" value="">
+      </div>
+      <div class="form_input">
+        <label for="room_number">Room:</label><br>
+        <input type="text" id="room_number" value="">
+      </div>
+      <div class="form_input">
+        <label for="given_date">Given Access:</label><br>
+        <input type="date" id="given_date" value="">
+      </div>
+      <div class="form_input">
+        <label for="lose_date">Lose Access:</label><br>
+        <input type="date" id="lose_date" value="">
+      </div>
+      <input type="button" value="Submit" onclick="submitForm()" style="margin-left:0.8em;">
+      <input type="button" value="Close" onclick="google.script.host.close()" style="margin-right:0.8em;"/>
+    </form>
+    <script>
+
+      // function setValues(first_val, last_val, advisor_val,andrew_val,key_val,room_val,given_val, lose_val){
+      //   document.getElementById('first_name').value   = first_val
+      //   document.getElementById('last_name').value    = last_val
+      //   document.getElementById('advisor').value      = advisor_val
+      //   document.getElementById('andrewID').value     = andrew_val
+      //   document.getElementById('key_number').value   = key_val
+      //   document.getElementById('room_number').value  = room_val
+      //   document.getElementById('given_date').value   = given_val
+      //   document.getElementById('lose_date').value    = lose_val    
+      // }
+
+      function setFirstName(first_value){
+        document.getElementById('first_name').value   = first_value
+      }
+
+      function submitForm() {
+        google.script.run
+          .withSuccessHandler(setFirstName)
+          .getFirstName()
+      }
+
+
+
+    </script>
+  </body>
+</html>

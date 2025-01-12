@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <style>
+    input[type="text"], input[type="date"]{
+      width:90%;
+      padding:0.8em;
+    }
+    .form_input{
+      padding:0.5em;
+    }
+  </style>
+  <body>
+    <form id="myForm">
+      <div class="form_input">
+        <label for="first_name">First Name:</label><br>
+        <input type="text" id="first_name" placeholder="First Name">
+      </div>
+      <div class="form_input">
+        <label for="last_name">Last Name:</label><br>
+        <input type="text" id="last_name" placeholder="Last Name">
+      </div>
+      <div class="form_input">
+        <label for="advisor">Advisor:</label><br>
+        <input type="text" id="advisor" placeholder="Advisor Name">
+      </div>
+      <div class="form_input">
+        <label for="andrewID">AndrewID:</label><br>
+        <input type="text" id="andrewID" placeholder="andrewID">
+      </div>
+      <div class="form_input">
+        <label for="key_number">Key Number:</label><br>
+        <input type="text" id="key_number" placeholder="4501-XXX">
+      </div>
+      <div class="form_input">
+        <label for="room_number">Room:</label><br>
+        <input type="text" id="room_number" placeholder="DH XXXX">
+      </div>
+      <div class="form_input">
+        <label for="given_date">Given Access:</label><br>
+        <input type="date" id="given_date" placeholder="mm/dd/yyyy">
+      </div>
+      <div class="form_input">
+        <label for="lose_date">Lose Access:</label><br>
+        <input type="date" id="lose_date" placeholder="mm/dd/yyyy">
+      </div>
+      <input type="button" value="Submit" onclick="submitForm()" style="margin-left:0.8em;">
+      <input type="button" value="Close" onclick="google.script.host.close()" style="margin-right:0.8em;"/>
+    </form>
+    <script>
+
+      function closeForm() {
+        google.script.host.close();
+      }
+
+      function submitForm() {
+        var fname = document.getElementById('first_name').value
+        var lname = document.getElementById('last_name').value
+        var advisor = document.getElementById('advisor').value
+        var andrewID = document.getElementById('andrewID').value
+        var keyNum = document.getElementById('key_number').value
+        var roomNum = document.getElementById('room_number').value
+        var givenDate = document.getElementById('given_date').value
+        var loseDate = document.getElementById('lose_date').value
+        google.script.run
+          .withSuccessHandler(closeForm)
+          .doSomething()
+      }
+
+
+
+    </script>
+  </body>
+</html>
