@@ -1,0 +1,9 @@
+# Ignore clasp specific files
+.clasp.json
+appsscript.json
+
+# Ignore node modules
+node_modules/
+
+# Ignore logs
+*.log
