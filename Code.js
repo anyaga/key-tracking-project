@@ -309,7 +309,8 @@ function onOpen() {
   SpreadsheetApp.getUi() // Or DocumentApp or SlidesApp or FormApp.
       .createMenu('Custom Menu')  
       .addItem('Show sidebar', 'sidebarHome')
-      .addItem('Show Form', 'sidebarAdd')
+      .addItem('Add sidebar', 'sidebarAdd')
+      .addItem('Edit sidebar', 'sidebarEdit')
       .addToUi();
 }
 
