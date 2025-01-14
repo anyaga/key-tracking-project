@@ -167,7 +167,9 @@ function validRoom(room){
 }
 
 //Valid date!!!!!
-
+function validDate(){
+  return
+}
 /*
 Translate form response to spreadsheet format (with keyReponse class)
 */
